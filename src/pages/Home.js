@@ -61,11 +61,11 @@ export default class Home extends React.Component {
     super();
     this.state = {
       uid: null,
+      username : null,
       image: null,
-      displayName: null,
       email: null,
 
-      post : []
+      post : []   // post will have content, image, uid, username
     };
   }
 
@@ -107,6 +107,7 @@ export default class Home extends React.Component {
                       postid : doc.id,
                       postimage: doc.data().image,                                          
                       postuid: doc.data().uid,
+                      postusername: doc.data().username,
                       postcontent: doc.data().content
                     });
                     if(doc.data().image === null)
@@ -114,10 +115,8 @@ export default class Home extends React.Component {
                   }                   
                   });
 
-                  this.setState({post : post});
-                 
+                  this.setState({post : post});   
                   console.log("post: ", this.state.post);
-                  console.log("all state: ", this.state);
           })
           .catch(function(error) {
               console.log("Error getting documents: ", error);
@@ -143,7 +142,7 @@ export default class Home extends React.Component {
                   <Space width="20px" />
                   <CardLayout
                     image={post.postimage}
-                    username={post.postuid}
+                    username={post.postusername}
                     content={post.postcontent}                    
                   />
                   <Space width="20px" />
