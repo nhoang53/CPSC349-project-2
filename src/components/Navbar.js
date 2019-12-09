@@ -49,8 +49,8 @@ export default class NavbarComponent extends React.Component {
                   <NavDropdown.Item href="#action/3.2">
                     Another action
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
+                  <NavDropdown.Item onClick={()=> fire.auth().signOut()} href="/landingpage">
+                    Logout
                   </NavDropdown.Item>
                 </NavDropdown>
               </>
