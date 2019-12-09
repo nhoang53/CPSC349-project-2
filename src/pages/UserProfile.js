@@ -15,7 +15,7 @@ import Space from "../components/Space";
 import Footer from "../components/Footer";
 
 import noImage from "../images/no-img.png";
-import background from "../images/home-background.jpg";
+import background from "../images/home-background-2.jpg";
 // import noImage from "../images/no-img-2.png";
 import firebase from 'firebase/app';
 
