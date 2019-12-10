@@ -58,7 +58,8 @@ const CardContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  padding-left: 30px;
   variant: bottom;
 `;
 
@@ -191,8 +192,7 @@ export default class Home extends React.Component {
     return (
       <div>
           <Container>
-          <Space height="100px" />
-            <Space height="25px" />
+          <Space height="30px" />
           <Card style={{ width: "40rem" }}>
             {/* <Card.Header as="h4">Profile</Card.Header> */}
             <Card.Body>          
