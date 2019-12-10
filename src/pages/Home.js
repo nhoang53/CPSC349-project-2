@@ -22,7 +22,7 @@ import background from "../images/home-background.jpg";
 const Container = styled.div`
   display: flex;
   margin: none;
-  background-image: url("https://images.unsplash.com/photo-1571942676516-bcab84649e44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
