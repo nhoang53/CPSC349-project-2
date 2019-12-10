@@ -30,7 +30,7 @@ const CardContainer = styled.div`
 `;
 
 const CardLayout = props => (
-  <Card style={{ width: "18rem" }}>
+  <Card style={{ width: "18rem", marginTop:"25px" }}>
     <Card.Img variant="top" src={props.img} />
     <Card.Body>
       <Card.Title>{props.name}</Card.Title>
@@ -48,7 +48,7 @@ const CardLayout = props => (
 
 export default class Discover extends React.Component {
   state = {
-    location: "New York",
+    location: "California",
     data: []
   };
 

@@ -35,11 +35,13 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;`;
+  justify-content: center;
+
+`;
 
 const CardLayout = props => (
-  <Card style={{ width: "18rem" }}>
-    <Card.Img variant="top" src={props.image} />
+  <Card style={{ width: "18rem", marginTop: "20px" }}>
+    <Card.Img style={{height: "30vh"}} variant="top" src={props.image} />
     <Card.Body>
       <Card.Title>{props.username}</Card.Title>
       <Card.Text>

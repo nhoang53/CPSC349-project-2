@@ -45,7 +45,8 @@ export default class Register extends React.Component {
         if (result) {
           result.user
             .updateProfile({
-              displayName: document.getElementById("username").value
+              displayName: document.getElementById("username").value,
+              photoURL: "https://firebasestorage.googleapis.com/v0/b/food-fighter.appspot.com/o/images%2Fno-img.png?alt=media&token=58c42aea-57a1-460c-a0fe-c69ebdcd4c28"
             })
             .then(s => {
               console.log("displayname", result.user.displayName);
@@ -54,7 +55,8 @@ export default class Register extends React.Component {
                 .set({
                   uid: result.user.uid,
                   email: result.user.email,
-                  name: result.user.displayName
+                  name: result.user.displayName,
+                  image: "https://firebasestorage.googleapis.com/v0/b/food-fighter.appspot.com/o/images%2Fno-img.png?alt=media&token=58c42aea-57a1-460c-a0fe-c69ebdcd4c28"
                 });
             });
         }
