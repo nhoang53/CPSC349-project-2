@@ -15,7 +15,7 @@ import LandingPage from "./pages/LandingPage";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.css";
-import UserProfile from "./pages/UserProfile";
+import UserProfile from "./pages/UserProfileJosephVersion";
 import Discover from "./pages/Discover";
 
 export default class App extends React.Component {

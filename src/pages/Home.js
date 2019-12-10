@@ -11,7 +11,6 @@ import styled from "styled-components";
 import Space from "../components/Space";
 import FooterComponent from "../components/Footer";
 import CardGroup from "react-bootstrap/CardGroup";
-
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -21,38 +20,32 @@ import background from "../images/home-background.jpg";
 
 const Container = styled.div`
   display: flex;
-  margin: none;
-  background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
-  height: 88vh;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: none;
+  background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
+  background-attachment: fixed;
+  background-size: cover;
 `;
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
 `;
 
 const CardLayout = props => (
   <Card style={{ width: "18rem", marginTop: "20px" }}>
-    <Card.Img style={{height: "30vh"}} variant="top" src={props.image} />
+    <Card.Img style={{height: "25vh"}} variant="top" src={props.image} />
     <Card.Body>
       <Card.Title>{props.username}</Card.Title>
       <Card.Text>
         {props.content}
         <br />
-        {/* <b>Likes: </b> {props.like} */}
-        {/* <b>comments: </b> {props.comments} */}
       </Card.Text>
-      {/* <a href={props.link}>
-        <Button variant="primary">Visit Page</Button>
-      </a> */}
     </Card.Body>
   </Card>
 );
@@ -102,7 +95,6 @@ export default class Home extends React.Component {
           .then((querySnapshot) => {
               let post = [];
               querySnapshot.forEach((doc) => {
-                  // console.log(doc.id, " => ", doc.data());
                   if(doc){                   
                     post.push({
                       postid : doc.id,
@@ -134,14 +126,14 @@ export default class Home extends React.Component {
       <div>
           <Container>
           <Space height="100px" />
-          <CardGroup>
+          <CardGroup style= {{marginLeft: "12rem"}}>
             {this.state.post.length === 0 ? (
               <Alert variant={"light"}>Now Loading...</Alert>
             ) : (
               this.state.post.map((post, postid) => (
                 <CardContainer key={postid}>
                   <Space width="20px" />
-                  <CardLayout
+                    <CardLayout
                     image={post.postimage}
                     username={post.postusername}
                     content={post.postcontent}                    
