@@ -20,16 +20,12 @@ import noImage from "../images/no-img.png";
 import background from "../images/home-background.jpg";
 
 const Container = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: none;
-  // background-image: url("https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
-  background-image: url(${background});
-  background-attachment: fixed;
+  background-image: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80");
+  background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 88vh;
 `;
 
 const CardContainer = styled.div`
